@@ -44,7 +44,7 @@ const ProductDetail = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-6">
-                        <img width={500} height={500} src={`http://localhost:3000/uploads/${productDetail?.productImage}`} />
+                        <img width={500} height={500} src={`/uploads/${productDetail?.productImage}`} />
                     </div>
                     <div className="col-6">
                         <div>Name : {productDetail?.productName} </div>

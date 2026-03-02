@@ -105,7 +105,7 @@ const Cart = () => {
                             cart?.items?.map((item) => (
                                 <>
                                     <div className='w-100 d-flex'>
-                                        <img height={200} width={200} src={`http://localhost:3000/uploads/${item.productImage}`} />
+                                        <img height={200} width={200} src={`/uploads/${item.productImage}`} />
                                         <div>
                                             <div>Name : {item.productName}</div>
                                             <div>Description: {item.productDescription}</div>

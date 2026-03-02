@@ -55,7 +55,7 @@ const Product = () => {
                 <Card
                   handleProductDetail={() => handleProductDetail(item._id)}
                   handleAddToCart={() => handleAddToCart(item)}
-                  name={item.productName} img={`http://localhost:3000/uploads/${item.productImage}`} description={item.productDescription} price={item.productPrice} />
+                  name={item.productName} img={`/uploads/${item.productImage}`} description={item.productDescription} price={item.productPrice} />
               </div>
             ))
           }

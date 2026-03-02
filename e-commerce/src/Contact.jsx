@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import axios from "./utils/axiosInstance"
 
 const Contact = () => {
     const [email, setEmail] = useState()
@@ -10,7 +10,7 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const { data } = await axios.post("http://localhost:3000/api/contact",
+            const { data } = await axios.post("/api/contact",
                 { email, fullname, message }
             )
             alert(data.message)

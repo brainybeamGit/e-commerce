@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "../utils/axiosInstance"
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -11,7 +11,7 @@ const Register = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post("http://localhost:3000/register",{
+            const { data } = await axios.post("/register",{
                     fullName, email, password, number}
             )
             toast(data.message)

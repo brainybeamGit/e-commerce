@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "../utils/axiosInstance"
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +11,7 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post("http://localhost:3000/login", {
+            const { data } = await axios.post("/login", {
                 email, password
             }
             )

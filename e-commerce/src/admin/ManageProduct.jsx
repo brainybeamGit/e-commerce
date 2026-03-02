@@ -15,7 +15,7 @@ const ManageProduct = () => {
   const fetchProduct = async () => {
     try {
 
-      const { data } = await axios.get("http://localhost:3000/product/list")
+      const { data } = await axios.get("/product/list")
       console.log(data.productList)
       setProductList(data.productList)
 
@@ -84,7 +84,7 @@ const ManageProduct = () => {
 
   const handleDelete = async (id) => {
     try {
-      const { data } = await axios.delete(`http://localhost:3000/product/delete/${id}`)
+      const { data } = await axios.delete(`/product/delete/${id}`)
       console.log(data)
       alert(data.message)
       fetchProduct();
@@ -114,7 +114,7 @@ const ManageProduct = () => {
 
               {
                 preview &&
-                <img width={100} height={100} src={`http://localhost:3000/uploads/${preview}`} alt="" />
+                <img width={100} height={100} src={`/uploads/${preview}`} alt="" />
               }
             </div>
 
@@ -153,7 +153,7 @@ const ManageProduct = () => {
                 productList?.map((item) => (
                   <tr key={item._id}>
                     <th scope="row">
-                      <img width={100} height={100} src={`http://localhost:3000/uploads/${item.productImage}`} alt="" />
+                      <img width={100} height={100} src={`/uploads/${item.productImage}`} alt="" />
                     </th>
                     <td>{item.productName}</td>
                     <td>{item.productDescription}</td>
